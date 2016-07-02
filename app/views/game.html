@@ -1,0 +1,24 @@
+
+<h1 class="header">Let's play Rock Paper Scissors!</h1>
+<div class="wrapper" ng-show="game.isClicked">
+  <a class="btn btn-lg btn-success" ng-click="game.play()">Play!
+    <span class="glyphicon glyphicon-ok"></span></a>
+  <div>User Selection : {{game.choice}}</div>
+  <div ng-if="game.CPUChoice">CPU Selection : {{game.CPUChoice}}</div>
+  <div ng-if="game.result">Result : {{game.result}}</div>
+</div>
+<div class="row">
+  <div class="col-md-3 col-md-offset-1" ng-click="game.shuffle('ROCK')">
+    <img class="btn img-responsive" src="images/rock.jpg" alt="Rock" ><br>
+  </div>
+
+  <div class="col-md-3" ng-click="game.shuffle('PAPER')">
+    <img class="btn img-responsive" src="images/paper.jpg" alt="Paper" ><br>
+  </div>
+
+  <div class="col-md-3" ng-click="game.shuffle('SCISSORS')">
+    <img class="btn img-responsive" src="images/scissor.jpg" alt="Scissors" ><br>
+  </div>
+</div>
+
+
